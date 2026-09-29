@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-chinese {
+    font-family: 'Noto Serif SC', 'Songti SC', SimSun, serif;
+  }
+  .font-calligraphy {
+    font-family: 'Ma Shan Zheng', 'Kaiti SC', KaiTi, cursive, serif;
+  }
+  .font-editorial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  header, .print\:hidden {
+    display: none !important;
+  }
+  #chinese-study-card {
+    box-shadow: none !important;
+    border-width: 1px !important;
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+}
